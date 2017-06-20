@@ -12,3 +12,36 @@ DashInsert 함수는 숫자로 구성된 문자열을 입력받은 뒤, 문자�
 var dashInsert = n => ("" + n).replace(/([13579]{2,})|([24680]{2,})/g, (_, o, e) => _.split("").join(o && "-" || e && "*"));
 
 console.log(dashInsert(4546793));
+
+
+//---
+var n = 4546793;
+
+var s = ("" + n).replace(/([13579])([13579])/g,(_,a,b)=>a+"-"+b)
+    	        .replace(/([24680])([24680])/g,(_,a,b)=>a+"*"+b);
+
+console.log(s);
+
+
+var n = 4546793;
+
+
+var dashInsert = function(n) {
+    return ("" + n).replace(/([13579]+)|([24680]+)/g, function(_, odd, even) {
+        return (odd || "").split("").join("-") + (even || "").split("").join("*")
+    });
+};
+
+console.log(dashInsert(4546793));
+
+
+
+var dashInsert = n => ("" + n).replace(/([13579]{2,})|([24680]{2,})/g, (_, o, e) => _.split("").join(o && "-" || e && "*"));
+
+console.log(dashInsert(4546793));
+
+
+var dashInsert = function(n) {
+    return ("" + n).split("").reduce((x,y) => x + ["*","","-"][+x.slice(-1) % 2 + (+y) % 2] + y);
+};
+console.log(dashInsert(4546793));

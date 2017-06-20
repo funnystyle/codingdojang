@@ -18,3 +18,21 @@ XXXXXX
 */
 
 (n=>console.log(Array.from(Array(n),(_,i)=>"O".repeat(n-i-1)+"X".repeat(i+1)).join("\n")))(6);
+
+//--
+
+var printox = function(n) {
+    var s = "";
+	for(let i = n - 1; i >= 0; i--) {
+        s += "O".repeat(i) + "X".repeat(n - i) + "\n";
+    }
+    console.log(s);
+};
+
+printox(6);
+
+
+var printox = n => console.log(Array.from(Array(n), (_, i) => "O".repeat(n - i - 1) + "X".repeat(i + 1)).join("\n"));
+printox(6);
+
+(n=>console.log(Array.from(Array(n),(_,i)=>"O".repeat(n-i-1)+"X".repeat(i+1)).join("\n")))(6);

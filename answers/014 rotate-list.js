@@ -45,3 +45,28 @@ console.log(rotateList("1 10 20 30 40 50").join(" "));
 console.log(rotateList("4 가 나 다 라 마 바 사").join(" "));
 console.log(rotateList("-2 A B C D E F G").join(" "));
 console.log(rotateList("0 똘기 떵이 호치 새초미").join(" "));
+
+//---
+
+var plusMod = function(n, m) {
+	return ((n % m) + m) % m;
+};
+
+var rotateList = function(input) {
+	var array = input.split(" ");
+	var index = +array.splice(0, 1)[0];
+	console.log(index);
+	console.log(array);
+	var length = array.length;
+	var offset = plusMod(index, length);
+	var front = array.splice(length - offset, offset);
+	console.log(front);
+	console.log(array);
+	front.concat(array);
+	return front.join(" ");
+};
+
+console.log(rotateList("1 10 20 30 40 50"));
+console.log(rotateList("4 가 나 다 라 마 바 사"));
+console.log(rotateList("-2 A B C D E F G"));
+console.log(rotateList("0 똘기 떵이 호치 새초미"));
