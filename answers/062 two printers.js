@@ -67,7 +67,7 @@ var twoPrinters = function (d) {
     var [x, y, n] = d;
 
     var k = Math.ceil(n * x * y / (x + y));
-    while (Math.floor(k/x) + Math.floor(k/y) < n) {
+    while (Math.floor(k / x) + Math.floor(k / y) < n) {
         k++;
     }
     return k;
