@@ -25,3 +25,12 @@ Sample Output
 3
 4
 */
+
+var steps = function(start, end, length, step) {
+    length = length || 1;
+    step = step || 0;
+
+    if (end - start <= 1) return step;
+    else return
+
+}
