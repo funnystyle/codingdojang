@@ -86,3 +86,64 @@ var input =
 
 var data = input.split("\n").map(v => v.split(" "));
 display(data);
+
+
+
+//---
+
+line = ["1011011111", "3222311233", "0011111011", "3212223232", "1011011011"];
+
+var input = "1234567890";
+
+var str = "";
+for (l of line) {
+    for (i of input) {
+        if (line.indexOf(l) % 2 === 0) {
+            if (l[i] === "1") {
+                str += " " + "-" + " ";
+            } else {
+                str += " " + " " + " ";
+            }
+        }
+
+        if (line.indexOf(l) % 2 !== 0) {
+            if (l[i] === "1") {
+                str += "|" + " " + " ";
+            } else if (l[i] === "2") {
+                str += " " + " " + "|";
+            } else {
+                str += "|" + " " + "|";
+            }
+        }
+        str += input.indexOf(i) === input.length - 1 ? "\n" : " ";
+    }
+    str += line.indexOf(l) === line.length - 1 ? "" : "\n";
+}
+
+console.log(str);
+
+//-----
+
+var line = ["1011011111", "3222311233", "0011111011", "3212223232", "1011011011"];
+var token = [
+    ["   ", " - "],
+    ["   ", "|  ", "  |", "| |"]
+];
+
+var input = "1234567890";
+var size = 2;
+var result = [];
+
+for (digit of input) {
+    for (let i = 0; i < 5; i++) {
+        var tokens = token[i % 2][line[i][digit]];
+        result[i] = (result[i] || "") + tokens[0] + tokens[1].repeat(size) + tokens[2] + " ";
+    }
+}
+
+// resize
+result = result.map(function(v, i) {
+    return i % 2 === 1 ? (v.slice(0, -1) + "\n").repeat(size).slice(0, -1) : v.slice(0, -1);
+});
+
+console.log(result.join("\n"));
