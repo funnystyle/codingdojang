@@ -15,15 +15,49 @@ Eight Queens Problem
 8 x 8 체스판에 8개의 Queen을 놓을 수 있는 방법은 모두 몇 가지인가?
 */
 
-var chess = Array.from(Array(8), () => Array.from(Array(8), () => 0));
+var queens = [];
+var count = 0;
 
-var place = function (chess, row, col) {
-    if (chess[row][col] === 1) return false;
-    chess = chess.map((line, r) => line.map((cell, c) => (r === row || c === col || Math.abs(r - row) === Math.abs(c - col)) && "1" || "0"));
-    chess[row][col] = "Q";
-    return chess;
+var place = function (row, col) {
+    console.log(row, col, queens)
+    for (let i = 0; i < row; i++) {
+        if (queens[i] === col || queens[i] === col - (row - i) || queens[i] === col + (row - i)) {
+            return false;
+        }
+    }
+    return true;
 };
 
-var draw = function(chess) {
-    console.log(chess.map(v => v.join(" ")).join("\n"));
+var chess = function (row) {
+    if (row == 8) count++;
+    for (let col = 0; col < 8; col++) {
+        if (place(row, col)) {
+            queens[row] = col;
+            chess(row + 1);
+        }
+    }
+}
+
+chess(0);
+
+console.log(count);
+
+
+
+//--------
+var place = function (row, col) {
+    for (let i = 0; i < row; i++) {
+        if (queens[i] === col || queens[i] === col - (row - i) || queens[i] === col + (row - i)) {
+            return false;
+        }
+    }
+    return true;
+};
+
+
+//----
+//  이거 안됨
+var place = function (queens, row, col) {
+    console.log(row, col, queens)
+    return queens.every((v, i) => v !== col && v !== col - (row - i) && v !== col + (row - i));
 };
