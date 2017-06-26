@@ -48,8 +48,8 @@ NO
 END OF OUTPUT
 */
 
-Slump
-D/E  F* (Slump)/G
+//Slump
+//D/E  F* (Slump)/G
 
 var input = "DFG";
 
@@ -144,20 +144,20 @@ console.log(isSlurpy("AHDFGA"));
 console.log(isSlurpy("DFGAH"));
 console.log(isSlurpy("ABABCC"));
 
-Slimp
-AH
-AB (Slimp) C
-A (Slump) C
-
-Slurpy
-(Slimp)(Slump)
-
-
+// Slimp
+// AH
+// AB (Slimp) C
+// A (Slump) C
+//
+// Slurpy
+// (Slimp)(Slump)
 
 
 
 
----------------
+
+
+// ---------------
 
 String.prototype.isSlump = () => /^([DE]F+)+G$/g.exec(this) !== null;
 var isSlump = s => /^([DE]F+)+G$/g.exec(s) !== null;

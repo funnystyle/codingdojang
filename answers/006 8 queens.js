@@ -19,7 +19,7 @@ var queens = [];
 var count = 0;
 
 var place = function (row, col) {
-    console.log(row, col, queens)
+    console.log(row, col, queens);
     for (let i = 0; i < row; i++) {
         if (queens[i] === col || queens[i] === col - (row - i) || queens[i] === col + (row - i)) {
             return false;
@@ -36,7 +36,7 @@ var chess = function (row) {
             chess(row + 1);
         }
     }
-}
+};
 
 chess(0);
 
@@ -58,6 +58,6 @@ var place = function (row, col) {
 //----
 //  이거 안됨
 var place = function (queens, row, col) {
-    console.log(row, col, queens)
+    console.log(row, col, queens);
     return queens.every((v, i) => v !== col && v !== col - (row - i) && v !== col + (row - i));
 };

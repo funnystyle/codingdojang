@@ -34,12 +34,11 @@ var squares = arr.map((a, i) => a + arr2[i]);
 console.log(squares);
 
 
-var input = `
-123 456
+var input =
+`123 456
 555 555
 123 594
-0 0
-`
+0 0`;
 
 var inputs = input.split("\n").map(v => v.trim());
 
@@ -78,10 +77,10 @@ var c = carry.reduce((a, b) => a + b);
 console.log(`${c ? c : "No"} carry operation${c > 1 ? "s" : ""}.`);
 
 
-123 456  579
-555 555 1110
-123 594  717
-0 0
+// 123 456  579
+// 555 555 1110
+// 123 594  717
+// 0 0
 
 
 
@@ -92,7 +91,7 @@ console.log(`${c ? c : "No"} carry operation${c > 1 ? "s" : ""}.`);
 var countCarry = function(input) {
 	var inputs = input.split("\n").map(v => v.trim());
 
-	for (line of inputs) {
+	for (let line of inputs) {
 		var [num1, num2] = line.split(" ").map(v => parseInt(v, 10));
 		var sum = num1 + num2;
 		if (sum === 0) return;

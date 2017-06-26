@@ -38,7 +38,7 @@ var getArea = function(input) {
 	var inputs = input.split("\n").map(v => v.trim());
 	var coordinates = [];
 
-	for (line of inputs) {
+	for (let line of inputs) {
 		var p = getPoint(line);
 
 		for (let x = p.x1; x < p.x2; x++) {
@@ -51,7 +51,7 @@ var getArea = function(input) {
 
 	return coordinates.reduce((a,b) => a.concat(b))
      	 	   		  .reduce((a,b) => a + b);
-}
+};
 
 var input =
 `1 2 4 4
@@ -69,7 +69,7 @@ var getArea = function(input) {
 	var inputs = input.split("\n").map(v => v.trim());
 	var coordinates = [];
 
-	for (line of inputs) {
+	for (let line of inputs) {
 		var p = getPoint(line);
 
 		for (let x = p.x1; x < p.x2; x++) {
@@ -82,4 +82,4 @@ var getArea = function(input) {
 
 	return coordinates.reduce((a,b) => a.concat(b))
      	 	   		  .reduce((a,b) => a + b);
-}
+};

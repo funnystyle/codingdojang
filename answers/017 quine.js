@@ -11,9 +11,9 @@ Quine은 자기 자신을 복사하는 프로그램이다. 즉, 인수를 취하
 
 
 (function foo() {
-    console.log('(' + foo + ')();')
+    console.log('(' + foo + ')();');
 })();
 
 (f=>f(f))(f=>"(f=>f(f))("+f.toString()+")")
 
-(function(){return'('+arguments.callee+')();'})();
+(function(){return'('+arguments.callee+')();';})();

@@ -28,9 +28,9 @@ var min = Number.MAX_VALUE;
 var result = [];
 var answer = [];
 
-for (v of mergesorted) {
+for (let v of mergesorted) {
 	for (let i = 0; i < list.length; i++) {
-		for (k of list[i]) {
+		for (let k of list[i]) {
 			result[i] = list[i][list[i].length - 1];
 			if (k >= v) {
 				result[i] = k;
@@ -69,7 +69,7 @@ var getSmallestRange = function(list) {
 		index[tuple.indexOf(min)]++;
 	}
 	return range;
-}
+};
 
 var list = [
 	[4, 10, 15, 24, 26],

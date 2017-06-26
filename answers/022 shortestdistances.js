@@ -13,13 +13,13 @@ var distance = (a, b) => Math.abs(a - b);
 var min = Number.MAX_VALUE;
 var shortest = [];
 
-input.reduce((a, b) => {
-	var d = distance(a, b);
-	if (d < min) {
-		min = d;
-		if (shortest)
-	}
-};
+// input.reduce((a, b) => {
+// 	var d = distance(a, b);
+// 	if (d < min) {
+// 		min = d;
+// 		if (shortest)
+// 	}
+// });
 
 
 ///--
@@ -61,6 +61,6 @@ s.reduce((a, b) => {
     return b;
 });
 
-for (d of dictionary.filter(v => v)[0]) {
+for (let d of dictionary.filter(v => v)[0]) {
     console.log(`(${d[0]}, ${d[1]})`);
 }

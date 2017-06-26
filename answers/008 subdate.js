@@ -23,7 +23,7 @@ var add = (a, b) => a + b;
 var parseDate = function(s) {
 	var [, year, month, day] = /^(\d{4})(\d{2})(\d{2})$/g.exec(s).map(v => parseInt(v));
 	return [year, month, day];
-}
+};
 
 var getDaysOfMonth = function(y, m) {
 	var d = 0;
@@ -78,7 +78,7 @@ var add = (a, b) => a + b;
 var parseDate = function(s) {
 	var [, year, month, day] = /^(\d{4})(\d{2})(\d{2})$/g.exec(s).map(v => parseInt(v));
 	return [year, month, day];
-}
+};
 
 var getDaysOfMonth = function(y, m) {
 	return daysOfMonth[~~isLeapYear(y)].filter((v, i) => i < m).reduce(add);

@@ -15,7 +15,7 @@ d(91) = 9 + 1 + 91 = 101
 
 var selfnumbers = Array.from(Array(5000), (_, i) => i + 1);
 var add = (a, b) => a + b;
-var str2int = s => parseInt(s, 10)
+var str2int = s => parseInt(s, 10);
 var gen = n => n + ("" + n).split('').map(str2int).reduce(add);
 
 for (let i = 1; i <= 5000; i++) {
@@ -28,7 +28,7 @@ console.log(sum);
 
 //for 문 없이 아래와 같이 할 수도 있는데, 그러면 selfnumbers 가 chain 되지 않아서 .reduce 를 chain 할 수가 없음
 
-selfnumbers.map((v, i, a) => { a[gen(i + 1) - 1] = 0 })
+selfnumbers.map((v, i, a) => { a[gen(i + 1) - 1] = 0; });
 var sum = selfnumbers.reduce(add);
 
 
@@ -39,10 +39,10 @@ var sum = selfnumbers.reduce(add);
 var selfnumbers = Array.from(Array(5000), (value, index) => index + 1);
 
 var add = (a, b) => a + b;
-var str2int = s => parseInt(s, 10)
+var str2int = s => parseInt(s, 10);
 var gen = n => n + ("" + n).split('').map(str2int).reduce(add);
 
-selfnumbers.map((v, i, a) => { a[gen(i + 1) - 1] = 0 })
+selfnumbers.map((v, i, a) => { a[gen(i + 1) - 1] = 0; });
 var sum = selfnumbers.reduce(add);
 
 console.log(sum);
@@ -68,7 +68,7 @@ console.log(count);
 //
 var selfnumbers = Array.from(Array(5000), (_, i) => i + 1);
 var add = (a, b) => a + b;
-var str2int = s => parseInt(s, 10)
+var str2int = s => parseInt(s, 10);
 var gen = n => n + ("" + n).split('').map(str2int).reduce(add);
 
 for (let i = 1; i <= 5000; i++) {
@@ -88,10 +88,10 @@ console.log(count);
 var selfnumbers = Array.from(Array(5000), (value, index) => index + 1);
 
 var add = (a, b) => a + b;
-var str2int = s => parseInt(s, 10)
+var str2int = s => parseInt(s, 10);
 var gen = n => n + ("" + n).split('').map(str2int).reduce(add);
 
-selfnumbers.map((v, i, a) => { a[gen(i + 1) - 1] = 0 })
+selfnumbers.map((v, i, a) => { a[gen(i + 1) - 1] = 0; });
 var sum = selfnumbers.reduce(add);
 
 console.log(sum);

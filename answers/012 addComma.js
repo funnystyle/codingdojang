@@ -55,7 +55,7 @@ console.log((-3245.24).addComma());
 console.log((-3245.2454545).addComma());
 
 function formatNumber (num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1$2,")
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1$2,");
 }
 
 console.log(formatNumber(2665));      // 2,665

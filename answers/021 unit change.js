@@ -36,23 +36,22 @@ param1         param2     result
 "12000 dxa"    "px"       "800 px"
 */
 
-1 inch  =  2.54 cm
-1 cm    =    10 mm
-1 inch  =    72 pt
-1 inch  =    96 px
-1 pt    =    20 dxa
-1 dxa   =   635 emu
+// 1 inch  =  2.54 cm
+// 1 cm    =    10 mm
+// 1 inch  =    72 pt
+// 1 inch  =    96 px
+// 1 pt    =    20 dxa
+// 1 dxa   =   635 emu
 
 var unit = {
     "inch" : 1,
     "cm"   : 2.54,
     "pt"   : 72,
     "mm"   : 10 * 2.54,
-    "pt"   : 72,
     "px"   : 96,
     "dxa"  : 72 * 20,
     "emu"  : 72 * 20 * 635
-}
+};
 
 var changeunit = function (m, u) {
     var [n, c] = m.split(" ");

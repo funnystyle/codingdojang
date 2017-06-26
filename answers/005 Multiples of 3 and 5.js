@@ -30,7 +30,7 @@ console.log(sum);
 
 // 1-1. 1 을 줄인 것
 
-console.log(Array.from(Array(1000),(_,i)=>i+1).filter(n=>!(n%3)||!(n%5)).reduce((a,b)=>a+b));
+console.log(Array.from(Array(1000),(_,i)=>i+1).filter(n=>!(n%3&&n%5)).reduce((a,b)=>a+b));
 
 // 2
 var threeSet = Array.from({length: 333}, (v, k) => (k + 1) * 3);

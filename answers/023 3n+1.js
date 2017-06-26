@@ -22,7 +22,7 @@ n이라는 값이 입력되었을때 1이 나올때까지 만들어진 수의 �
 
 var cycle = n => n % 2 !== 0 ? cycle(3 * n + 1) + 1 : n / 2 === 1 ? 2 : cycle(n / 2) + 1;
 
-var getRange = (a, b) => Array.from(Array(b - a + 1), (v, i) => a + i)
+var getRange = (a, b) => Array.from(Array(b - a + 1), (v, i) => a + i);
 var max = (a, b) => Math.max(a, b);
 var cycle = n => n === 1 ? 1 : n % 2 === 0 ? cycle(n / 2) + 1 : cycle(3 * n + 1) + 1;
 var maxcycle = (a, b) => getRange(a, b).map(cycle).reduce(max);

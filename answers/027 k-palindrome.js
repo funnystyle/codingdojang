@@ -15,8 +15,8 @@ var compare = function(pal, k) {
     else {
         console.log(2, head.slice(i + 1) + [...tail.slice(i)].reverse().join(""));
         console.log(3, head.slice(i) + [...tail.slice(i + 1)].reverse().join(""));
-        return compare(head.slice(i + 1) + [...tail.slice(i)].reverse().join(""), k - 1)
-            || compare(head.slice(i) + [...tail.slice(i + 1)].reverse().join(""), k - 1);
+        return compare(head.slice(i + 1) + [...tail.slice(i)].reverse().join(""), k - 1) ||
+               compare(head.slice(i) + [...tail.slice(i + 1)].reverse().join(""), k - 1);
     }
 };
 

@@ -22,11 +22,11 @@ m	n	출력
 
 var totalpage = function(m, n) {
 	return Math.ceil(m / n);
-}
+};
 
 var totalpage = function(m, n) {
 	return parseInt(m / n) + ~~(m % n);
-}
+};
 
 console.log(totalpage(0, 1));
 console.log(totalpage(1, 1));

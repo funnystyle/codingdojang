@@ -107,7 +107,7 @@ var check = function(maze) {
     enqueue(queue, [startrow, startcol], map, visited);
 
     while (queue.length > 0) {
-        var [row, col] = queue.shift();
+        let [row, col] = queue.shift();
         if (map[row][col] === ">") return true;
 
         enqueue(queue, [row - 1, col], map, visited);

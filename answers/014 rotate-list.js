@@ -32,7 +32,7 @@
 */
 
 var rotateList = function(input) {
-    var inputs = input.split(" ")
+    var inputs = input.split(" ");
     var [index, array, length, offset] = [+inputs.slice(0, 1)[0],
                                           inputs.slice(1),
                                           inputs.length - 1,

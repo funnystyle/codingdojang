@@ -42,7 +42,7 @@ var countByDigit = n => Math.ceil(9 * Math.pow(10, Math.ceil(n / 2) - 1));
 
 var palindrome = function(n)  {
     let i, sum = 0;
-
+    var pal;
     for (i = 0; sum <= n; i++) {
         sum += countByDigit(i);
     }
@@ -50,7 +50,7 @@ var palindrome = function(n)  {
 
     var remain = n - sum;
     if (remain === 0) {
-        var pal = Math.pow(10, i - 2) -1;
+        pal = Math.pow(10, i - 2) -1;
         return pal;
     }
 
@@ -59,7 +59,7 @@ var palindrome = function(n)  {
     var end = start + remain - 1;
     var offset = (i - 1) % 2;
     var reverse = ("" + end).split("").reverse().slice(offset).join("");
-    var pal = "" + end + reverse;
+    pal = "" + end + reverse;
     return pal;
 };
 
