@@ -79,3 +79,13 @@ selfnumbers.map((v, i, a) => { a[gen(i + 1) - 1] = 0; });
 var sum = selfnumbers.reduce(add);
 
 console.log(sum);
+
+
+///-----
+
+var numbers = Array.from(Array(5000), (value, index) => index + 1);
+var add = (a, b) => (+a) + (+b);
+var genned = new Set(numbers.map(n => n + `${n}`.split('').reduce(add, 0)));
+var selfsum = numbers.filter(x => !genned.has(x)).reduce(add, 0);
+
+console.log(selfsum);
