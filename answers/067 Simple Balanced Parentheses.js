@@ -27,7 +27,7 @@ var balanced = function(parens) {
     var stack = 0;
     var pushpop = { "(" : 1, ")" : -1 };
 
-    for (p of parens.split("")) {
+    for (let p of parens.split("")) {
         stack += pushpop[p];
         if (stack < 0) return false;
     }

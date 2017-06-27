@@ -54,7 +54,7 @@ var inning = input.match(/(\d{3}\s*\d\s*\d)/g);
 
 var candidate = Array.from(Array(999), (v, i) => "" + (i + 1)).slice(110).filter(v => v.indexOf("0") === -1 && v[0] !== v[1] && v[1] !== v[2] && v[2] !== v[0]); // 111~999
 
-for (i of inning) {
+for (let i of inning) {
     candidate = candidate.filter(v => play(v, i));
 }
 
@@ -72,7 +72,7 @@ var perms = function perms(xs, k){
         var xs_ = xs.slice(),
             x = xs_.splice(i, 1),
             ps = perms(xs_, k - 1);
-        r.push(...ps.map(p=>x.concat(p)))
+        r.push(...ps.map(p=>x.concat(p)));
     }
     return r;
 };
@@ -86,12 +86,12 @@ var thrown = function (v, i) {
 
 var play = function (inning) {
     var candidate = perms([1, 2, 3, 4, 5, 6, 7, 8, 9], 3).map(v => v.join(""));
-    for (i of inning) {
+    for (let i of inning) {
         candidate = candidate.filter(v => thrown(v, i));
     }
 
     return candidate.length;
-}
+};
 
 var input = "4 123 1 1 356 1 0 327 2 0 489 0 1";
 var inning = input.match(/(\d{3}\s*\d\s*\d)/g);

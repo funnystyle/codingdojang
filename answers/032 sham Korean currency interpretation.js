@@ -65,7 +65,7 @@ var interprete = function (korean) {
     var result = 0;
     var one = 0;
     var thousand = 0;
-    for (k of korean) {
+    for (let k of korean) {
         var d = digit.indexOf(k);
         if (digit[k] > -1) {
             one += d;

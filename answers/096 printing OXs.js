@@ -31,7 +31,6 @@ var printox = function(n) {
 
 printox(6);
 
-
 var printox = n => console.log(Array.from(Array(n), (_, i) => "O".repeat(n - i - 1) + "X".repeat(i + 1)).join("\n"));
 printox(6);
 

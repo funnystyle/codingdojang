@@ -46,4 +46,4 @@ assertEqual(compVer("0.1.2", "3.0.1"),  "0.1.2 < 3.0.1");
 assertEqual(compVer("1.0.0", "1.0"),    "1.0.0 = 1.0");
 assertEqual(compVer("1.2.0", "1.1.99"), "1.2.0 > 1.1.99");
 assertEqual(compVer("1.1", "1.0.1"),    "1.1 > 1.0.1");
-assertEqual(compVer("3.01", "3.1"),     "3.01 = 3.1");
+assertEqual(compVer("3.01", "3.1"),     "3.01 = 3.1"); 

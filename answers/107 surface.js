@@ -36,7 +36,7 @@ var surface = function(skyview) {
     return sum;
 };
 
-surface(input)
+surface(input);
 
 // test
 var assertEqual = (a, b) => console.log(a === b);

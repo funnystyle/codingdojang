@@ -52,4 +52,4 @@ for (let i = 1; i < size; i++) {
 }
 console.log(interval.map(v => v.join(" ")).join("\n"));
 
-[[1,10],[10, 5],[1, 3],[1, 4], [2, 10]].sort((a,b) => a[1] - b[1]).sort((a,b) => a[0] - b[0])
+[[1,10],[10, 5],[1, 3],[1, 4], [2, 10]].sort((a,b) => a[1] - b[1]).sort((a,b) => a[0] - b[0]);

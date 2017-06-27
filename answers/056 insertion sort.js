@@ -20,6 +20,7 @@ Insertion Sort
 var array = [5,2,4,6,1,3];
 
 console.log(`step 0 : ${array.join(" ")}`);
+
 for (let i = 1; i < array.length; i++) {
     var c = 0;
     while (array[i] > array[c]) c++;

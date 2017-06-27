@@ -10,6 +10,7 @@
 에러 번호 출력을 이용해서는 안됩니다.
 */
 
+
 var o = +true;
 
 console.log([o<<o, o-o, o, (o<<o<<o)+o, o-o, o, o, o].join(""));

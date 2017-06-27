@@ -20,9 +20,9 @@ var ans = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var counts = Array.from(Array(10), () => 0);
 
 var counts = [];
-
+var increase = $ => counts[$] = (counts[$] || 0) + 1;
 for (let i = 1; i <= 1000; i++) {
-    Array.from(`${i}`).map(v => counts[v] = (counts[v] || 0) + 1);
+    Array.from(`${i}`).map(increase);
 }
 
 console.log(counts.map((v, i) => `${i}:${v}개`).join(", "));

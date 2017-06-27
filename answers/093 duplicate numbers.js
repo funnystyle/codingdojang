@@ -15,6 +15,6 @@ var once = str => str.split("").sort().join("") === "0123456789";
 
 var input = ["0123456789", "01234", "01234567890", "6789012345", "012322456789"];
 
-for (s of input) {
+for (let s of input) {
     console.log(`${s} : ${once(s)}`);
 }

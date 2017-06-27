@@ -11,7 +11,7 @@ n이 완전수라는 것은 n이 1-초완전수라는 것이라는 명제와 동
 <예시> 1. 입력 1000 2. 출력 (6,1) (21,2) (28,1) (301,6) (325,3) (496,1) (697,12)
 */
 
-// 
+//
 
 var aliquotSum = n => Array.from(Array(n), (v, i) => i + 1)
                            .reduce((a, b) => a + (n % b === 0 ? b : 0), 0);
@@ -35,7 +35,7 @@ var findhp = function (n) {
     for (var i = 3; i <= n; i++) {
         hyperperfect(i);
     }
-}
+};
 
 findhp(1000);
 

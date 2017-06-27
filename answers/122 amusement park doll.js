@@ -50,6 +50,6 @@ var hit = function (array, sum) {
     } else if (array[0] > sum) {
         hit(array.slice(1), sum);
     }
-}
+};
 
 if (hit(dolls, sum)) console.log(stack.sort((a, b) => a - b).join(" "));

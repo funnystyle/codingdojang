@@ -50,8 +50,8 @@ var lines = input.split("\n");
 var size = parseInt(lines[0]);
 var data = lines[1].split(" ").map(v => parseInt(v));
 
-var loop = 0;
-var swap = 0;
+var loop = 0,
+    swap = 0;
 do {
     var swapped = false;
     for (let i = 0; i < size - 1; i++) {

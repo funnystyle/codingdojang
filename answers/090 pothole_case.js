@@ -32,7 +32,6 @@ console.log(pothole_case("CodingDojang"));
 console.log(pothole_case("numGoat30"));
 console.log(pothole_case(""));
 
-
 // reduce 이용
 var pothole_case = function(camel) {
     return camel.split("").reduce((a, b) => a + b.replace(/([A-Z0-9])/g, (s => `_${s.toLowerCase()}`)), "");

@@ -15,7 +15,7 @@ var fibonacci = (function(n) {
 
 	return function fib(i) {
 		return cache[i] ? cache[i] : cache[i] = fib(i - 1) + fib(i - 2);
-	}
+	};
 })();
 
 var res = 0,

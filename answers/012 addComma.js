@@ -40,7 +40,7 @@ function numberWithCommas(x) {
 }
 
 Number.prototype.addComma = function() {
-	return ('' + this).replace(/\B(?=(?=\d*\.)(\d{3})+(?!\d))/g, ',')
+	return ('' + this).replace(/\B(?=(?=\d*\.)(\d{3})+(?!\d))/g, ',');
 };
 
 Number.prototype.addComma = function() {

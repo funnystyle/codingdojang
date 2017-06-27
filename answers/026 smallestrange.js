@@ -51,7 +51,6 @@ for (let v of mergesorted) {
 console.log(answer.join(" "));
 console.log(min);
 
-
 var getTuple = (list, index) => list.map((v, i) => v[index[i]]);
 var outOfBounds = tuple => tuple.length !== tuple.filter(v => typeof v !== "undefined").length;
 
@@ -85,13 +84,10 @@ console.log(`[${range.join(" ")}]`);
 console.log(range[1] - range[0]);
 
 
-while (!outofbounds(tuple)) {
+while (!outOfBounds(tuple)) {
 	var tuple = list.map((v, i) => v[index[i]]);
 	index[tuple.indexOf(Math.max(...tuple))] ++;
 }
-
-
-
 
 
 tuple.indexOf(Math.max(...tuple));

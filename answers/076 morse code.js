@@ -43,6 +43,6 @@ var code = ".... .  ... .-.. . . .--. ...  . .- .-. .-.. -.--";
 
 var morse = function (c) {
     return c.split(" ").map(v => dic[v]).join("");
-}
+};
 
 console.log(morse(code));

@@ -21,7 +21,7 @@ Number.DIGIT = "0123456789ABCDEF";
 Number.prototype.systemTo = function(base) {
     return this > base ? parseInt(this / base).systemTo(base) + "" + Number.DIGIT[this % base] :
                          Number.DIGIT[this];
-};  
+};
 
 console.log((233).systemTo(2));
 console.log((233).systemTo(8));

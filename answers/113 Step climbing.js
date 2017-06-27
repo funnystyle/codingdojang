@@ -1,8 +1,7 @@
 /*
+상품 is 뭔들 (2016 인하대 프로그래밍 경진대회 B번)
 계단 오르기
-2
- 추천
-Lv. 3
+
 계단을 오르는 방법에는 여러가지가 있습니다.
 한 계단씩만 올라가는 방법이 있고,
 두 계단만 올라가는 방법이 있고
@@ -26,7 +25,7 @@ var climbing = function (n, j) {
                             .map(v => climb(v, j))
                             .reduce((a, b) => a + b, 0);
 		}
-		return  cache[n];
+		return cache[n];
 	})(n, j);
 };
 
@@ -66,10 +65,10 @@ var fibonacci = (function(n) {
 	return function fib(i) {
 		callcount++;
 		if (typeof cache[i - 1] === "undefined") {
-			cache[i - 1] = fib(i - 1) + fib(i - 2)
+			cache[i - 1] = fib(i - 1) + fib(i - 2);
 		}
 		return  cache[i - 1];
-	}
+	};
 
 	// cache 미사용
 	// fibocacci 1~30 까지 호출시 4356586회 호출됨

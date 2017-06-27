@@ -31,7 +31,7 @@ Number.prototype.canDivide = function(n) {
 // [1, n] 배열을 만들어준다
 var getSeries = function(n) {
     return Array.from(Array(n), (_, i) => i + 1);
-}
+};
 
 // [1, n] 사이의 완전수들을 배열로 반환
 var getPerfectNumbers = function(n) {

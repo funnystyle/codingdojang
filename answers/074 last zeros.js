@@ -19,16 +19,16 @@ N! = 1 * 2 * 3 * 4 ... N
 
 var f = function(n) {
     return n < 5 ? 0 : Math.floor(n / 5) + f(n / 5);
-}
+};
 
 var f = function(n) {
-    var zeros = 0
+    var zeros = 0;
     while (n >= 5) {
         n = Math.floor(n / 5);
         zeros += n;
     }
     return zeros;
-}
+};
 
 console.log(f(12));
 console.log(f(25));

@@ -22,10 +22,10 @@ var fibonacci = (function(n) {
 	return function fib(i) {
 		callcount++;
 		if (typeof cache[i - 1] === "undefined") {
-			cache[i - 1] = fib(i - 1) + fib(i - 2)
+			cache[i - 1] = fib(i - 1) + fib(i - 2);
 		}
 		return  cache[i - 1];
-	}
+	};
 
 	// cache 미사용
 	// fibocacci 1~30 까지 호출시 4356586회 호출됨
@@ -63,4 +63,4 @@ var print = function(n) {
 };
 
 print(30);
-console.log(callcount)
+console.log(callcount);

@@ -48,6 +48,6 @@ var pingpong = function(t, n = 0, c = 1, d = 1) {
 console.log(pingpong(8)); // = 6
 console.log(pingpong(22)); // = 0
 console.log(pingpong(68)); // = 2
-console.log(pingpong(100)); // = 2
+console.log(pingpong(100)); // = 2 
 
 //---

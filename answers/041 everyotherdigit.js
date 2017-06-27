@@ -16,6 +16,7 @@ var result2 = input => input.replace(/../g, s => s[0] + s[1].replace(/\d/g, "*")
 // by string index
 var result3 = input => input.split("").map((v, i) => i % 2 ? v.replace(/\d/g, "*") : v).join("");
 
+
 console.log(result1(input));
 console.log(result2(input));
 console.log(result3(input));

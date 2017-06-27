@@ -57,7 +57,12 @@ var s = [1, 3, 4, 8, 13, 17, 20];
 var dictionary = [];
 
 s.reduce((a, b) => {
-    dictionary[b - a] ? dictionary[b - a].push([a, b]) : dictionary[b - a] = [[a, b]];
+    if (dictionary[b - a]) {
+        dictionary[b - a].push([a, b]);
+    } else {
+        dictionary[b - a] = [[a, b]];
+    }
+    
     return b;
 });
 

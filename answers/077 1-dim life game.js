@@ -96,9 +96,9 @@ computePrevState("11110") == "10010"
 var computePrevState = function (cell) {
     var start = ["00", "01", "10", "11"];
     var result = [];
-    for (s of start) {
+    for (let s of start) {
         var prev = s;
-        for (c of cell.split("")) {
+        for (let c of cell.split("")) {
             prev += prev[prev.length - 2] ^ prev[prev.length - 1] ^ c;
         }
         if (prev.slice(0, 2) === prev.slice(-2)) {
@@ -109,9 +109,9 @@ var computePrevState = function (cell) {
     return result.length === 1 ? result[0] :
            result.length === 0 ? "No" :
                                  "Multiple";
-}
+};
 
-computePrevState("00011101") == "01100101"
-computePrevState("000") == "Multiple"
-computePrevState("000001") == "No"
-computePrevState("11110") == "10010"
+console.log(computePrevState("00011101"));  // === "01100101";
+console.log(computePrevState("000"));       // === "Multiple";
+console.log(computePrevState("000001"));    // === "No";
+console.log(computePrevState("11110"));     // === "10010";

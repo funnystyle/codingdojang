@@ -67,8 +67,8 @@ var isJolly = function(line) {
 };
 
 var distancesOf = function(array) {
-    return Array.from(Array(array.length - 1), (v, i) => Math.abs(array[i + 1] - array[i]))
-}
+    return Array.from(Array(array.length - 1), (v, i) => Math.abs(array[i + 1] - array[i]));
+};
 
 console.log(isJolly("4 1 4 2 3") ? "Jolly" : "Not Jolly");
 console.log(isJolly("5 1 4 2 -1 6") ? "Jolly" : "Not Jolly");

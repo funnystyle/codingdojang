@@ -35,7 +35,6 @@ console.log(names.countByName("이재영"));
 console.log(names.getNames());
 console.log(names.getNames({sort : true}));
 
-
 // countByLastname 과 countByName 을 합쳐봤습니다.
 var Names = function(str) {
 	this.array = str.split(",");

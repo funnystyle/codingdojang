@@ -38,7 +38,7 @@ Sample Output
 3 6666
 */
 
-var getReverse = n => parseInt([...'' + n].reverse().join(""))
+var getReverse = n => parseInt([...'' + n].reverse().join(""));
 var isPalindrome = n => n === getReverse(n);
 var addReverse = n => n + getReverse(n);
 
@@ -57,7 +57,7 @@ var main = function(input) {
     for (let i = 1; i <= inputs[0]; i++) {
         console.log(palindrome(inputs[i]).join(" "));
     }
-}
+};
 
 var input = `3
              195

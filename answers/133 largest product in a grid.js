@@ -32,7 +32,7 @@ Largest product in a grid
 
 String.prototype.stripMargin = function() {
   return this.split("\n").map(line => line.trim()).join("\n");
-}
+};
 
 var matrix   = `08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 				49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
@@ -66,7 +66,7 @@ var getTuple = function(matrix, row, col, rowOffset, colOffset) {
 		matrix[row + rowOffset * 2][col + colOffset * 2],
 		matrix[row + rowOffset * 3][col + colOffset * 3]
 	];
-}
+};
 
 
 var max = 1;

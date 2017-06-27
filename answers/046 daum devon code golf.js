@@ -32,17 +32,17 @@ console.log("     *\n     *\n    * *\n   *   *\n  *     *\n**       **\n  *     
 console.log("5\n5\n41\n33\n25\n0070\n25\n33\n41\n5\n5".replace(/\d/g,$=>" ".repeat($)+"*"))
 
 //----
-*
-*
-* *
-*   *
-*     *
-**       **
-*     *
-*   *
-* *
-*
-*
+// *
+// *
+// * *
+// *   *
+// *     *
+// **       **
+// *     *
+// *   *
+// * *
+// *
+// *
 
 "5\n5\n41\n33\n25\n0070\n25\n33\n41\n5\n5".replace(/(d)/g,`${" ".repeat($1)+"*"}`);
 console.log("5\n5\n41\n33\n25\n0070\n25\n33\n41\n5\n5".replace(/(\d)/g,(_,$)=>" ".repeat($)+"*"))
@@ -60,29 +60,21 @@ console.log("5\n5\n41\n33\n25\n0070\n25\n33\n41\n5\n5".replace(/\d/g,$=>" ".repe
 
 console.log("5.5.41.33.25.0070.25.33.41.5.5".replace(/\d/g,$=>" ".repeat($)+"*").split(".").join("\n"))
 
-133 bytes
+// 133 bytes
 
-```{.javascript}
 console.log([65,65,133,273,577,3587,577,273,133,65,65].map(v=>v.toString(2).slice(1).replace(/0/g," ").replace(/1/g,"*")).join("\n"))
-```
 
-118 bytes
+// 118 bytes
 
-```{.javascript}
 console.log("     *\n     *\n    * *\n   *   *\n  *     *\n**       **\n  *     *\n   *   *\n    * *\n     *\n     *")
-```
 
-91 bytes
+// 91 bytes
 
-```{.javascript}
 console.log("5\n5\n41\n33\n25\n0070\n25\n33\n41\n5\n5".replace(/\d/g,$=>" ".repeat($)+"*"))
-```
 
-85 bytes
-```{.javascript}
+// 85 bytes
 alert("5\n5\n41\n33\n25\n0070\n25\n33\n41\n5\n5".replace(/\d/g,$=>" ".repeat($)+"*"))
-```
-escape("5\n5\n41\n33\n25\n0070\n25\n33\n41\n5\n5")
 
 
-5\n5\n41\n33\n25\n0070\n25\n33\n41\n5\n5
+
+// 5\n5\n41\n33\n25\n0070\n25\n33\n41\n5\n5

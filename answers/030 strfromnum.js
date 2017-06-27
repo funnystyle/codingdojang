@@ -49,12 +49,12 @@ var strFromNum = function(n) {
 		if (i.length >= 2) {
 			itoa(i.substr(2), a + (alphabet[index - 1] || ""));
 		}
-	}
+	};
 
 	itoa(input, "");
 
 	return Array.from(result);
-}
+};
 
 console.log(strFromNum(1123).join("\n"));
 console.log(strFromNum(10001).join("\n"));

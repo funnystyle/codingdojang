@@ -27,7 +27,7 @@ var getUgly = function(index) {
     } while (n < index);
 
     return ugly[0];
-}
+};
 
 
 var getUgly2 = function(index) {
@@ -42,14 +42,14 @@ var getUgly2 = function(index) {
     } while (n < index);
 
     return ugly[0];
-}
+};
 
-var from = performance.now()
+// var from = performance.now();
 console.log(`The 1500'th ugly number is ${getUgly(1500)}.`);
-var to = performance.now()
-console.log(`${to - from} ms`);
+// var to = performance.now();
+// console.log(`${to - from} ms`);
 
-var from = performance.now()
+// var from = performance.now();
 console.log(`The 1500'th ugly number is ${getUgly2(1500)}.`);
-var to = performance.now()
-console.log(`${to - from} ms`);
+// var to = performance.now();
+// console.log(`${to - from} ms`);

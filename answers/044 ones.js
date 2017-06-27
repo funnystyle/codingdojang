@@ -22,6 +22,7 @@ var ones = function(n) {
     return i.length;
 };
 
+
 console.log(ones(3));
 console.log(ones(7));
 console.log(ones(9901));

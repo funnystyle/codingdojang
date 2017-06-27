@@ -60,6 +60,15 @@ Sample Output
 끝.
 */
 
+var easy = function(input) {
+    var list = input.split("\n").map(v => parseInt(v));
+    return list.slice(0, list.indexOf(0)).map(getNext);
+};
+
+var getNext = function(n) {
+    return parseInt(("0" + n.toString(2)).replace(/01(1*)(0*)$/g, "10$2$1"), 2);
+};
+
 var input= `1
             2
             3
@@ -67,18 +76,17 @@ var input= `1
             78
             0`;
 
+console.log(easy(input).join("\n"));
+
+
+
 var easy = function(input) {
     var inputs = input.split("\n").map(v => parseInt(v)),
-        results = [],
-        n = 0;
-    for (let i = 0; n = inputs[i]; i++) {
+        results = [];
+
+    for (let n of inputs) {
+        if (n === 0) break;
         results.push(getNext(n));
     }
     return results;
 };
-
-var getNext = function(n) {
-    return parseInt(("0" + n.toString(2)).replace(/01(1*)(0*)$/g, "10$2$1"), 2);
-};
-
-console.log(easy(input).join("\n"));

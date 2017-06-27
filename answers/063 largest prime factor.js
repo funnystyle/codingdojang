@@ -40,12 +40,12 @@ var getLargestPrimeFactor = function(n) {
 
 console.log(getLargestPrimeFactor(600851475143));
 
->>> 6857
+// >>> 6857
 
 //---
 
 var getLargestPrimeFactor = function(num) {
-    var n = num, 
+    var n = num,
         i = 0;
     while(n > 1) {
         for (i = 2; i < Math.ceil(2 / n); i++) {
@@ -58,12 +58,12 @@ var getLargestPrimeFactor = function(num) {
     }
     // 여기까지 오면 n 은 소수이다.
     return num;
-}
+};
 
 console.log(getLargestPrimeFactor(600851475143));
 
 
-2 ~ 2/n 까지 검사하다가 약수를 만나면 나눈다
+// 2 ~ 2/n 까지 검사하다가 약수를 만나면 나눈다
 
 
 var from = performance.now();

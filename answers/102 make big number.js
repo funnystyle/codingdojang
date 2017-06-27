@@ -10,9 +10,6 @@
 console.log([3, 30, 34, 5, 9].sort((a, b) => ("" + a + b) - ("" + b + a)).reverse().join(""));
 console.log([1,2,3].sort((a, b) => ("" + a + b) - ("" + b + a)).reverse().join(""));
 
-
-
-
 Array.prototype.arrange = function () {
     return this.sort((a, b) => `${a}${b}` - `${b}${a}`).reverse().join("");
 };

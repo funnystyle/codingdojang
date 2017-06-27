@@ -135,7 +135,7 @@ var main = function(input) {
     var standards = [];
     for (let i = 1; i <= inputs[0]; i++) {
         let s = standard(inputs[i]);
-        standards[s] ? standards[s]++ : standards[s] = 1;
+        standards[s] = (standards[s] || 0) + 1;
     }
 
     Object.keys(standards)

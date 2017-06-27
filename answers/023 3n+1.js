@@ -27,6 +27,7 @@ var max = (a, b) => Math.max(a, b);
 var cycle = n => n === 1 ? 1 : n % 2 === 0 ? cycle(n / 2) + 1 : cycle(3 * n + 1) + 1;
 var maxcycle = (a, b) => getRange(a, b).map(cycle).reduce(max);
 
+
 console.log(maxcycle(1,     10));
 console.log(maxcycle(100,  200));
 console.log(maxcycle(201,  210));

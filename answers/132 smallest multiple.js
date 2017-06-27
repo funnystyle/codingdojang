@@ -10,11 +10,11 @@ Smallest multiple
 
 var gcd = function g(x, y) {
     return y ? g(y, x % y) : x;
-}
+};
 
 var lcd = function(x, y) {
     return x * y / gcd(x, y);
-}
+};
 
 var arr = Array.from({length: 20}, (v, k) => k + 1); // make 1 to 20 array with array-like object and mapFn
 

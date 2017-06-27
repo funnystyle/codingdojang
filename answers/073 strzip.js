@@ -26,8 +26,6 @@ console.log(strzip("aaabbcccccca"));
 console.log(strzip("abcdefg"));
 
 
-
-
 var strzip = function(str) {
     return str.replace(/(\w)\1*/g, (str, ch) => ch + str.length);
 };

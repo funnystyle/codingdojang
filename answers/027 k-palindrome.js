@@ -23,7 +23,6 @@ var compare = function(pal, k) {
 compare("abxa", 1);
 compare("abdxa ", 1);
 
-
 var compare = function(pal, k) {
     if (pal.length <= 1) return true;
 

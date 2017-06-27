@@ -43,13 +43,13 @@ asciiartn(7);
 
 //---
 
-N     N
-NN    N
-N N   N
-N  N  N
-N   N N
-N    NN
-N     N
+// N     N
+// NN    N
+// N N   N
+// N  N  N
+// N   N N
+// N    NN
+// N     N
 
 
 var asciiartn = function(n) {
@@ -60,13 +60,13 @@ var asciiartn = function(n) {
     console.log(s);
 };
 
-005
-014
-113
-212
-311
-410
-500
+// 005
+// 014
+// 113
+// 212
+// 311
+// 410
+// 500
 
 
 var asciiartn = function(n) {
@@ -94,11 +94,6 @@ asciiartn(1);
 asciiartn(3);
 asciiartn(5);
 asciiartn(7);
-
-
-
-
-
 
 
 var array = Array.from({length: 1000}, (v, k) => k + 1); 

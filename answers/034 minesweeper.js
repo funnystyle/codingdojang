@@ -90,7 +90,7 @@ var getMimeMap = function(input) {
                 accumulate(map, row + 1, col + 1);
             }
             return cell;
-        })
+        });
         return line;
     });
 
@@ -109,10 +109,10 @@ var input1 =
 
 printMimeMap(getMimeMap(input1));
 
-> *100
-> 2210
-> 1*10
-> 1110
+// > *100
+// > 2210
+// > 1*10
+// > 1110
 
 var input2 =
 `*...
@@ -122,10 +122,10 @@ var input2 =
 
 printMimeMap(getMimeMap(input2));
 
-*100
-2210
-1*10
-1110
+// *100
+// 2210
+// 1*10
+// 1110
 
 var input3 =
 `**...
@@ -134,6 +134,6 @@ var input3 =
 
 printMimeMap(getMimeMap(input3));
 
-> **100
-> 33200
-> 1*100
+// > **100
+// > 33200
+// > 1*100

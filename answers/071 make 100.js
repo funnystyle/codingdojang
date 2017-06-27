@@ -14,4 +14,6 @@ var calc = function(n) {
     } else {
         return parseInt(n.slice(0, 1)) + parseInt(n.slice(1));
     }
-}
+};
+
+console.log(calc(i));

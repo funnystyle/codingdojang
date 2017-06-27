@@ -22,7 +22,7 @@ var countsec = function(n) {
     }
 
     return min * 60;
-}
+};
 
 console.log(countsec(3));
 

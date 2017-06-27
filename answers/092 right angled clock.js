@@ -17,11 +17,11 @@ Total: n번!
 시간표현은 오전, 오후가 아닌 24시 방식으로 써주세요!
 */
 
-24 * 60
-분침은 60:360 = 1 : 6
-시침은 60: 30 = 1 : 0.5
-
-12:00 부터 시작
+// 24 * 60
+// 분침은 60:360 = 1 : 6
+// 시침은 60: 30 = 1 : 0.5
+//
+// 12:00 부터 시작
 
 var minAngle = function(sec) {
     return (sec / 10) % 360;
@@ -29,11 +29,11 @@ var minAngle = function(sec) {
 
 var hourAngle = function(sec) {
     return (sec / 120) % 360;
-}
+};
 
 var getTime = function(sec) {
     return `${("0" + parseInt(sec / 3600)).slice(-2)}:${("0" + parseInt((sec % 3600) / 60)).slice(-2)}`;
-}
+};
 
 var count = 0;
 var now = 0;
@@ -42,10 +42,10 @@ for (let i = 0; i < 86400; i++) {
     now = Math.abs(hourAngle(i) - minAngle(i));
 
     // 이전각을 기억하여 89-90/269-270 변할 때를 체크
-    if ((parseInt(prev) === 89 && parseInt(now) === 90)
-            || (parseInt(prev) === 90 && parseInt(now) === 89)
-            || (parseInt(prev) === 269 && parseInt(now) === 270)
-            || (parseInt(prev) === 270 && parseInt(now) === 269)) {
+    if ((parseInt(prev) === 89 && parseInt(now) === 90) ||
+            (parseInt(prev) === 90 && parseInt(now) === 89) ||
+            (parseInt(prev) === 269 && parseInt(now) === 270) ||
+            (parseInt(prev) === 270 && parseInt(now) === 269)) {
         console.log(getTime(i));
         count++;
     }

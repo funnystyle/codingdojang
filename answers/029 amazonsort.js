@@ -56,7 +56,7 @@ var amazonsort = function(list) {
 		}
 	}
 	return list;
-}
+};
 
 var list = makelist(10);
-console.log(amazonsort(list));
+console.log(amazonsort(list).join(" "));

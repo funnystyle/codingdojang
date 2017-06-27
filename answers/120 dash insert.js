@@ -28,7 +28,7 @@ var n = 4546793;
 
 var dashInsert = function(n) {
     return ("" + n).replace(/([13579]+)|([24680]+)/g, function(_, odd, even) {
-        return (odd || "").split("").join("-") + (even || "").split("").join("*")
+        return (odd || "").split("").join("-") + (even || "").split("").join("*");
     });
 };
 

@@ -3,7 +3,7 @@ var cipher = `79,59,12,2,79,35,8,28,20,2,3,68,8,9,68,45,0,12,9,67,68,4,7,5,23,27
 var counts1 = [];
 var counts2 = [];
 var counts3 = [];
-var arr = cipher.split(",")
+var arr = cipher.split(",");
 var arr1 = arr.filter((v, i) => i % 3 === 0);
 var arr2 = arr.filter((v, i) => i % 3 === 1);
 var arr3 = arr.filter((v, i) => i % 3 === 2);

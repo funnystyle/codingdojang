@@ -38,8 +38,9 @@ var combination = function combination(array){
     for (var i = 0; i <= array.length; i++){
         var head = array.slice(i, i + 1),
             tail = array.slice(i + 1),
-            tailcombs = combination(tail);
-        combs.push(...tailcombs.map($ => head.concat($)))
+            tailcombs = combination(tail),
+            flat = $ => head.concat($);
+        combs.push(...tailcombs.map(flat));
     }
     return combs;
 };

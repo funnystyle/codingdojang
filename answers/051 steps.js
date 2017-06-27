@@ -31,6 +31,5 @@ var steps = function(start, end, length, step) {
     step = step || 0;
 
     if (end - start <= 1) return step;
-    else return
-
-}
+    else return;
+};

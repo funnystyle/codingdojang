@@ -34,7 +34,7 @@ no
 // 이런 수는 모두 x^2 으로 나타낼 수 있으므로
 // 제곱수인지 아닌지를 판단하면 된다
 var isOn = function (n) {
-    return Number.isInteger(Math.sqrt(n))
+    return Number.isInteger(Math.sqrt(n));
 };
 
 var input=
@@ -44,7 +44,7 @@ var input=
 0`;
 
 var line = input.split("\n").map(v => parseInt(v));
-for (n of line) {
+for (let n of line) {
     if (n === 0) break;
     console.log(isOn(n) ? "yes" : "no");
 }

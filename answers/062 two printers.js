@@ -70,6 +70,7 @@ var twoPrinters = function (d) {
     while (Math.floor(k / x) + Math.floor(k / y) < n) {
         k++;
     }
+    
     return k;
 };
 

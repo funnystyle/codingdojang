@@ -44,7 +44,7 @@ var paint = function(canvas, x, y, c) {
     var visited = Array.from(Array(canvas.length), v => Array.from(Array(canvas[0].length), () => 0));
 
     enqueue(queue, [x, y, c], canvas, visited);
-    
+
     while (queue.length > 0) {
         var [row, col, color] = queue.shift();
         canvas[row][col] = color;
@@ -66,7 +66,6 @@ var enqueue = function(queue, [row, col, color], canvas, visited) {
 var print = function(canvas) {
     console.log(canvas.map(v => v.join("")).join("\n"));
 };
-
 
 var input=
 `10 10

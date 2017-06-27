@@ -31,7 +31,7 @@ console.log(`ans : ${answer.join(" ")}`);
 
 var list = [-1, 1, 3, -2, 2];
 var count = 0;
-for (v of list) {
+for (let v of list) {
 	if (v < 0) count++;
 }
 
