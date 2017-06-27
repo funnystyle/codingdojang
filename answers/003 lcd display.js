@@ -55,7 +55,8 @@ var digit = [
     "1111111",
     "1111011",
 ];
-var display = function (data) {
+
+var display = function(data) {
     let str = "";
     let j = 0;
     while (data && data[j] && data[j][0] !== "0") {
@@ -79,18 +80,19 @@ var display = function (data) {
     }
 };
 
-var input =
-`2 12345
-3 67890
-0 0`;
-
-var display = function (input) {
+var lcd = function(input) {
+    console.log(input);
     var data = input.split("\n").map(v => v.split(" "));
-    for (d of data) {
+    for (let d of data) {
         if (d[0] === 0) break;
         display(d);
         console.log();
     }
-}
+};
+
+var input =
+`2 12345
+3 67890
+0 0`;
 
 display(input);
