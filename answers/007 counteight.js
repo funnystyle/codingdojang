@@ -14,6 +14,7 @@ var count = Array.from({length: 10000}, (v, k) => k + 1)
 				 .length;
 console.log(count);
 
+
 var count = Array.from({length: 10000}, (v, k) => k + 1)
 				 .join()
 				 .split("8")

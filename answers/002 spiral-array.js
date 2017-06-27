@@ -20,7 +20,7 @@ var initarray = function(rowsize = 6, colsize = 6) {
 
 Array.prototype.getRowCol = function() {
     return {row : this.length, col : this[0].length};
-}
+};
 
 Array.prototype.printMatrix = function() {
     var {row, col} = this.getRowCol();
@@ -31,8 +31,8 @@ Array.prototype.printMatrix = function() {
     };
 
     var str = "";
-    for (line of this) {
-        for (value of line) {
+    for (let line of this) {
+        for (let value of line) {
             str += getspace(("" + value).length, maxlength) + value;
         }
         str += "\n";
