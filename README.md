@@ -4,3 +4,4 @@
 
 - javascript(ES6) 사용
 - functional program 지향
+- jshint 
