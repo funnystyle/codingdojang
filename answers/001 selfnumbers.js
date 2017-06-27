@@ -49,22 +49,6 @@ console.log(sum);
 
 
 
-
-
-
-for (let i = 1; i <= 5000; i++) {
-	generators[gen(i)] = 0;
-}
-
-var count = generators.reduce(add);
-
-console.log(count);
-
-
-
-
-
-
 //
 var selfnumbers = Array.from(Array(5000), (_, i) => i + 1);
 var add = (a, b) => a + b;
