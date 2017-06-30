@@ -25,7 +25,7 @@ console.log(multisum(10, 1000)); //->93150
 
 //---
 var multisum2 = (f, t) => Array.from(Array(t-f+1),(_,i)=>i+f)
-                               .reduce((a,b)=>[...`${b}`].reduce((c,d)=>c*d,1)+a, 0);
+                               .reduce((a,b)=>[...`${b}`].reduce((c,d)=>c*d,1)+a,0);
 
 console.log(multisum2(10, 15));   //->15
 console.log(multisum2(10, 1000)); //->93150
